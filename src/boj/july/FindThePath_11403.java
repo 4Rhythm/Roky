@@ -67,7 +67,9 @@ public class FindThePath_11403 {
         }
         System.out.println(sb);
     }
-
+    // 0
+    // 0 [0, 1, 0]
+    // 1 [1, 0, 1]
     public static void search(List<List<Integer>> graph, int index, int start) {
         List<Integer> list = graph.get(index);
 

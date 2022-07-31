@@ -35,6 +35,8 @@ public class LargestNumber {
                 return (o1 + o2).compareTo(o2 + o1);
             }
         });
+        // 1 30 34 3
+        // 1 30 3 34
 
         StringBuilder sb = new StringBuilder();
 
@@ -42,7 +44,7 @@ public class LargestNumber {
             sb.append(buff[i]);
         }
 
-        if (sb.toString().charAt(0) == '0') {
+        if (sb.toString().charAt(0) == '0') { // 0000
             return "0";
         } else {
             answer = sb.toString();

@@ -29,7 +29,7 @@ public class Printer {
     }
 
     public static int solution(int[] priorities, int location) {
-        LinkedList<Node> list = new LinkedList<>();
+        LinkedList<Node> list = new LinkedList<>(); // deque -> index
         // 우선순위가 높은 노드를 먼저 출력
         for (int i = 0; i < priorities.length; i++) {
             Node node = new Node(i, priorities[i]);
