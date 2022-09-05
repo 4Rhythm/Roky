@@ -25,9 +25,6 @@ public class Teaching_1062 {
             System.out.println("0");
             return;
         } else if(K == 26) {
-            System.out.println("26");
-            return;
-        } else if (K > N + 5){
             System.out.println(N);
             return;
         }
@@ -78,7 +75,6 @@ public class Teaching_1062 {
                 wordCount++;
             }
         }
-
         return wordCount;
     }
 }

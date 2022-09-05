@@ -3,6 +3,7 @@ package boj.september;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Jump_1890 {
@@ -40,6 +41,9 @@ public class Jump_1890 {
                     dp[down][j] += dp[i][j];
                 }
             }
+        }
+        for (int i = 0; i < N; i++) {
+            System.out.println(Arrays.toString(dp[i]));
         }
         System.out.println(dp[N-1][N-1]);
     }
