@@ -13,7 +13,7 @@ public class Problem_11000 {
 
         StringTokenizer st;
 
-        PriorityQueue<Class> queue = new PriorityQueue<>();
+        PriorityQueue<Lecture> queue = new PriorityQueue<>();
 
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
@@ -21,7 +21,7 @@ public class Problem_11000 {
             int start = Integer.parseInt(st.nextToken());
             int end = Integer.parseInt(st.nextToken());
 
-            queue.add(new Class(start, end));
+            queue.add(new Lecture(start, end));
         }
 
         // 강의실 개수 구하기
@@ -32,7 +32,7 @@ public class Problem_11000 {
         while (!queue.isEmpty()) {
             int endTime = pq.peek();
 
-            Class tmp = queue.poll();
+            Lecture tmp = queue.poll();
 
             if (tmp.start >= endTime) { // 강의실 추가 없이 수업을 이어서 할 수 있음
                 pq.poll();
@@ -44,11 +44,11 @@ public class Problem_11000 {
     }
 }
 
-class Class implements Comparable<Class>{
+class Lecture implements Comparable<Lecture>{
     int start;
     int end;
 
-    public Class(int start, int end) {
+    public Lecture(int start, int end) {
         this.start = start;
         this.end = end;
     }
@@ -56,7 +56,7 @@ class Class implements Comparable<Class>{
     // 시작 시간을 기준으로 오름차순 정렬
     // 시작 시간이 같으면 종료 시간을 기준으로 오름차순 정렬
     @Override
-    public int compareTo(Class o) {
+    public int compareTo(Lecture o) {
         if (this.start == o.start) {
             return this.end - o.end;
         }
