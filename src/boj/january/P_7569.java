@@ -69,10 +69,10 @@ public class P_7569 {
 
     }
 
-    public static void spread(List<Tomato> tomatoes) {
+    public static void spread(List<Tomato> tomato2s) {
         List<Tomato> tmp = new ArrayList<>();
 
-        for (Tomato t : tomatoes) {
+        for (Tomato t : tomato2s) {
             // 4방
             for (int i = 0; i < 4; i++) {
                 int nextX = t.x + dx[i];
